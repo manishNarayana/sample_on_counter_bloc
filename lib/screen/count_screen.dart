@@ -30,35 +30,38 @@ class CountScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Counter")),
         body: Center(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconButton(
-                  icon: const Icon(Icons.plus_one),
-                  onPressed: () {
-                    context.read<CountBloc>().add(CounterIncrementEvent(count: Count(itemCount: counter)));
+          child:Container(
+            color: Colors.blueGrey,
+            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.plus_one),
+                    onPressed: () {
+                      context.read<CountBloc>().add(CounterIncrementEvent());
 
-                  },
-                ),
-                Text(
-                  counter.toString(),
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.exposure_minus_1),
-                  onPressed: () {
-                    context.read<CountBloc>().add(CounterDecrementEvent(count: Count(itemCount: counter)));
-                  },
-                ),
-              ],
-            ),
-            SizedBox(height: 20), // Spacing between the rows
-            Text(
-              display,
-              style: TextStyle(fontSize: 16, color: Colors.grey),
-            ),
-          ]),
+                    },
+                  ),
+                  Text(
+                    counter.toString(),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.exposure_minus_1),
+                    onPressed: () {
+                      context.read<CountBloc>().add(CounterDecrementEvent());
+                    },
+                  ),
+                ],
+              ),
+              SizedBox(height: 20), // Spacing between the rows
+              Text(
+                display,
+                style: TextStyle(fontSize: 16, color: Colors.grey),
+              ),
+            ])
+            ,),
         ));
   }
 }
