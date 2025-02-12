@@ -1,0 +1,36 @@
+# Flutter & Dart
+.dart_tool/
+.build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+**/GeneratedPluginRegistrant.java
+**/GeneratedPluginRegistrant.swift
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.podspec
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/engine/
+ios/Flutter/generated.xcconfig
+
+# Android
+android/.gradle/
+android/app/debug.keystore
+android/key.properties
+
+# VS Code
+.vscode/
+
+# JetBrains (IntelliJ, Android Studio)
+.idea/
+*.iml
+
+# Logs & System Files
+*.log
+*.lock
+.DS_Store
